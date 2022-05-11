@@ -19,29 +19,30 @@
 package com.practice;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
+import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.generic.CrossBrowserCheck;
 import com.generic.DataPropertyReader;
 import com.generic.MasterPageFactory;
+import com.utils.Highlighter;
 
 public class BaseLogin {
 
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		WebDriver driver = CrossBrowserCheck.crossBrowserCheck("chrome");
 		MasterPageFactory MPF = new MasterPageFactory(driver);
 		DataPropertyReader DPR = new DataPropertyReader();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(7,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(DPR.getValue("url"));
 		MPF.getSignIn().click();
 		MPF.getUsername().sendKeys(DPR.getValue("email"));
 		MPF.getPassword().sendKeys(DPR.getValue("password"));
+		Highlighter.highlighter(driver,MPF.getSubmitLogin());
+		Thread.sleep(7000);
 		MPF.getSubmitLogin().click();
 		if(MPF.getSignOut().isDisplayed())
 		{
