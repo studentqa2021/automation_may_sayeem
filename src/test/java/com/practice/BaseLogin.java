@@ -25,8 +25,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.generic.CrossBrowserCheck;
+import com.generic.DataPropertyReader;
 import com.generic.MasterPageFactory;
-import com.generic.DataProrertyReader;
 
 public class BaseLogin {
 
@@ -35,7 +35,7 @@ public class BaseLogin {
 	{
 		WebDriver driver = CrossBrowserCheck.crossBrowserCheck("chrome");
 		MasterPageFactory MPF = new MasterPageFactory(driver);
-		DataProrertyReader DPR = new DataProrertyReader();
+		DataPropertyReader DPR = new DataPropertyReader();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(7,TimeUnit.SECONDS);
 		driver.get(DPR.getValue("url"));
