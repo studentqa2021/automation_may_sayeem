@@ -23,16 +23,17 @@ import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import com.generic.CrossBrowserCheck;
 import com.generic.DataPropertyReader;
 import com.generic.MasterPageFactory;
 import com.utils.Highlighter;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseLogin {
 
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
-		WebDriver driver = CrossBrowserCheck.crossBrowserCheck("chrome");
+		WebDriver driver = WebDriverManager.chromedriver().create();
 		MasterPageFactory MPF = new MasterPageFactory(driver);
 		DataPropertyReader DPR = new DataPropertyReader();
 		driver.manage().window().maximize();
