@@ -20,8 +20,12 @@ package com.practice;
 
 import java.io.IOException;
 import java.time.Duration;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+
 
 import com.generic.DataPropertyReader;
 import com.generic.MasterPageFactory;
@@ -33,17 +37,25 @@ public class BaseLogin {
 
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
+		Logger log = Logger.getLogger(BaseLogin.class.getName());
+		PropertyConfigurator.configure("./Log4j.properties");
 		WebDriver driver = WebDriverManager.chromedriver().create();
+		log.info("Loading Web Driver");
 		MasterPageFactory MPF = new MasterPageFactory(driver);
 		DataPropertyReader DPR = new DataPropertyReader();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		log.info("Loading supplied web address");
 		driver.get(DPR.getValue("url"));
+		log.info("Click signin to go to signin page");
 		MPF.getSignIn().click();
+		log.info("fill up username");
 		MPF.getUsername().sendKeys(DPR.getValue("email"));
+		log.info("fill up password");
 		MPF.getPassword().sendKeys(DPR.getValue("password"));
 		Highlighter.highlighter(driver,MPF.getSubmitLogin());
 		Thread.sleep(7000);
+		log.info("click signin button");
 		MPF.getSubmitLogin().click();
 		if(MPF.getSignOut().isDisplayed())
 		{
