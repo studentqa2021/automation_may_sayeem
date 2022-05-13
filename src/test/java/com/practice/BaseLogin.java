@@ -25,8 +25,6 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
-
 import com.generic.DataPropertyReader;
 import com.generic.MasterPageFactory;
 import com.utils.Highlighter;
@@ -47,7 +45,7 @@ public class BaseLogin {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		log.info("Loading supplied web address");
 		driver.get(DPR.getValue("url"));
-		log.info("Click signin to go to signin page");
+		log.info("Click SignIn to go to SignIn page");
 		MPF.getSignIn().click();
 		log.info("fill up username");
 		MPF.getUsername().sendKeys(DPR.getValue("email"));
@@ -55,7 +53,7 @@ public class BaseLogin {
 		MPF.getPassword().sendKeys(DPR.getValue("password"));
 		Highlighter.highlighter(driver,MPF.getSubmitLogin());
 		Thread.sleep(7000);
-		log.info("click signin button");
+		log.info("click SignIn button");
 		MPF.getSubmitLogin().click();
 		if(MPF.getSignOut().isDisplayed())
 		{
