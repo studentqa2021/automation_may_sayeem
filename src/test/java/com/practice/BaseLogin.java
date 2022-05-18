@@ -38,7 +38,7 @@ public class BaseLogin {
 		Logger log = Logger.getLogger(BaseLogin.class.getName());
 		PropertyConfigurator.configure("./Log4j.properties");
 		WebDriver driver = WebDriverManager.chromedriver().create();
-		log.info("Loading Web Driver");
+		log.info("WebDriver Loaded");
 		MasterPageFactory MPF = new MasterPageFactory(driver);
 		DataPropertyReader DPR = new DataPropertyReader();
 		driver.manage().window().maximize();

@@ -340,3 +340,15 @@
 2022-05-13 14:23:13 INFO  BaseLogin:50 - fill up username
 2022-05-13 14:23:13 INFO  BaseLogin:52 - fill up password
 2022-05-13 14:23:20 INFO  BaseLogin:56 - click SignIn button
+2022-05-13 14:26:11 INFO  BaseLogin:41 - Loading Web Driver
+2022-05-13 14:26:11 INFO  BaseLogin:46 - Loading supplied web address
+2022-05-13 14:26:13 INFO  BaseLogin:48 - Click SignIn to go to SignIn page
+2022-05-13 14:26:18 INFO  BaseLogin:50 - fill up username
+2022-05-13 14:26:18 INFO  BaseLogin:52 - fill up password
+2022-05-13 14:26:25 INFO  BaseLogin:56 - click SignIn button
+2022-05-18 01:25:44 INFO  com.practice.BaseLogin (BaseLogin.java:41) - WebDriver Loaded
+2022-05-18 01:25:44 INFO  com.practice.BaseLogin (BaseLogin.java:46) - Loading supplied web address
+2022-05-18 01:25:49 INFO  com.practice.BaseLogin (BaseLogin.java:48) - Click SignIn to go to SignIn page
+2022-05-18 01:25:51 INFO  com.practice.BaseLogin (BaseLogin.java:50) - fill up username
+2022-05-18 01:25:51 INFO  com.practice.BaseLogin (BaseLogin.java:52) - fill up password
+2022-05-18 01:25:59 INFO  com.practice.BaseLogin (BaseLogin.java:56) - click SignIn button
