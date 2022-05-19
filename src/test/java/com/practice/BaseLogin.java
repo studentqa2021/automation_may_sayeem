@@ -36,7 +36,7 @@ public class BaseLogin {
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		Logger log = Logger.getLogger(BaseLogin.class.getName());
-		PropertyConfigurator.configure("./Log4j.properties");
+		//PropertyConfigurator.configure("./Log4j.properties");
 		WebDriver driver = WebDriverManager.chromedriver().create();
 		log.info("WebDriver Loaded");
 		MasterPageFactory MPF = new MasterPageFactory(driver);
