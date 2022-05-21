@@ -18,18 +18,16 @@
 
 package com.practice;
 
-import java.io.IOException;
-import java.time.Duration;
-
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import com.generic.DataPropertyReader;
 import com.generic.MasterPageFactory;
 import com.utils.Highlighter;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+import java.io.IOException;
+import java.time.Duration;
 
 public class BaseLogin {
 

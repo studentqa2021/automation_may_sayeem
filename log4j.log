@@ -46,3 +46,15 @@
 2022-05-21 00:33:49 INFO  com.practice.BaseLogin (BaseLogin.java:50) - fill up username
 2022-05-21 00:33:49 INFO  com.practice.BaseLogin (BaseLogin.java:52) - fill up password
 2022-05-21 00:33:56 INFO  com.practice.BaseLogin (BaseLogin.java:56) - click SignIn button
+2022-05-21 00:35:20 INFO  com.practice.BaseLogin (BaseLogin.java:41) - WebDriver Loaded
+2022-05-21 00:35:20 INFO  com.practice.BaseLogin (BaseLogin.java:46) - Loading supplied web address
+2022-05-21 00:35:21 INFO  com.practice.BaseLogin (BaseLogin.java:48) - Click SignIn to go to SignIn page
+2022-05-21 00:35:22 INFO  com.practice.BaseLogin (BaseLogin.java:50) - fill up username
+2022-05-21 00:35:22 INFO  com.practice.BaseLogin (BaseLogin.java:52) - fill up password
+2022-05-21 00:35:29 INFO  com.practice.BaseLogin (BaseLogin.java:56) - click SignIn button
+2022-05-21 00:36:17 INFO  com.practice.BaseLogin (BaseLogin.java:39) - WebDriver Loaded
+2022-05-21 00:36:17 INFO  com.practice.BaseLogin (BaseLogin.java:44) - Loading supplied web address
+2022-05-21 00:36:18 INFO  com.practice.BaseLogin (BaseLogin.java:46) - Click SignIn to go to SignIn page
+2022-05-21 00:36:19 INFO  com.practice.BaseLogin (BaseLogin.java:48) - fill up username
+2022-05-21 00:36:19 INFO  com.practice.BaseLogin (BaseLogin.java:50) - fill up password
+2022-05-21 00:36:27 INFO  com.practice.BaseLogin (BaseLogin.java:54) - click SignIn button
